@@ -1,1 +1,3 @@
-print("#pythoniscool")
+def easy_print():
+    print("#pythoniscool")
+
