@@ -1,2 +1,2 @@
 def easy_print():
-    print("#pythoniscool")
+    return "#pythoniscool"
