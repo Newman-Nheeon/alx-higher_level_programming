@@ -1,0 +1,125 @@
+======================
+Doctest Integers addition
+======================
+
+Import the function:
+
+       >>> add_integer = __import__('0-add_integer').add_integer
+
+Now use it:
+
+    >>> add_integer(1, 2)
+    3
+
+    >>> add_integer(-1, -2)
+    -3
+
+    >>> add_integer(100, -2)
+    98
+
+    >>> add_integer(-2, 100)
+    98
+
+    >>> add_integer(0, 0)
+    0
+
+    >>> add_integer(0, 2)
+    2
+
+    >>> add_integer(2, 0)
+    2
+
+    >>> add_integer()
+    Traceback (most recent call last):
+    	      ...
+    TypeError: add_integer() missing 1 required positional argument: 'a'
+
+    >>> add_integer(2)
+    100
+
+    >>> add_integer(-2)
+    96
+
+    >>> add_integer(100.3, -2)
+    98
+
+    >>> add_integer(-2, 100.3)
+    98
+
+    >>> add_integer(100.3, 100.3)
+    200
+
+    >>> add_integer(0, 5j)
+    Traceback (most recent call last):
+    	      ...
+    TypeError: b must be an integer
+
+    >>> add_integer(5j)
+    Traceback (most recent call last):
+    	      ...
+    TypeError: a must be an integer
+
+    >>> add_integer(float('inf'), 3)
+    Traceback (most recent call last):
+    	      ...
+    OverflowError: cannot convert float infinity to integer
+
+    >>> add_integer(float('nan'), 3)
+    Traceback (most recent call last):
+    	      ...
+    ValueError: cannot convert float NaN to integer
+
+    >>> add_integer("School")
+    Traceback (most recent call last):
+    	      ...
+    TypeError: a must be an integer
+
+    >>> add_integer("Holberton", "School")
+    Traceback (most recent call last):
+    	      ...
+    TypeError: a must be an integer
+
+    >>> add_integer(4, "School")
+    Traceback (most recent call last):
+    	      ...
+    TypeError: b must be an integer
+
+    >>> add_integer("School", 4)
+    Traceback (most recent call last):
+    	      ...
+    TypeError: a must be an integer
+
+    >>> add_integer([2, 4, 6], 1)
+    Traceback (most recent call last):
+    	      ...
+    TypeError: a must be an integer
+
+    >>> add_integer([2, 4, 6])
+    Traceback (most recent call last):
+    	      ...
+    TypeError: a must be an integer
+
+    >>> add_integer(1, [2, 4, 6])
+    Traceback (most recent call last):
+    	      ...
+    TypeError: b must be an integer
+
+    >>> add_integer(2, None)
+    Traceback (most recent call last):
+    	      ...
+    TypeError: b must be an integer
+
+    >>> add_integer(None, 2)
+    Traceback (most recent call last):
+    	      ...
+    TypeError: a must be an integer
+
+    >>> add_integer(None)
+    Traceback (most recent call last):
+    	      ...
+    TypeError: a must be an integer
+
+    >>> add_integer(1, 2, 3)
+    Traceback (most recent call last):
+    	      ...
+    TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
