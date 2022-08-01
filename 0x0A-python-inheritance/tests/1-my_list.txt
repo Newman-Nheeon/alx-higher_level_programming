@@ -1,0 +1,114 @@
+======================
+Doctest 1. My list - 1-my_list.py
+======================
+
+Import the function:
+
+       >>> MyList = __import__('1-my_list').MyList
+
+Now use it:
+
+    >>> my_list = MyList()
+    >>> print(my_list)
+    []
+
+    >>> my_list.print_sorted()
+    []
+
+    >>> my_list = MyList()
+    >>> my_list.append(1)
+    >>> my_list.append(4)
+    >>> my_list.append(2)
+    >>> my_list.append(3)
+    >>> my_list.append(5)
+    >>> print(my_list)
+    [1, 4, 2, 3, 5]
+    >>> my_list.print_sorted()
+    [1, 2, 3, 4, 5]
+    >>> print(my_list)
+    [1, 4, 2, 3, 5]
+
+    >>> my_list.append(-5)
+    >>> my_list.append(-3)
+    >>> print(my_list)
+    [1, 4, 2, 3, 5, -5, -3]
+
+    >>> my_list.append("holberton")
+    >>> print(my_list)
+    [1, 4, 2, 3, 5, -5, -3, 'holberton']
+
+    >>> my_list.append(holberton)
+    Traceback (most recent call last):
+    	            ...
+    NameError: name 'holberton' is not defined
+
+    >>> my_list.append()
+    Traceback (most recent call last):
+    	      ...
+    TypeError: append() takes exactly one argument (0 given)
+
+    >>> my_list.append(None)
+    >>> print(my_list)
+    [1, 4, 2, 3, 5, -5, -3, 'holberton', None]
+
+    >>> issubclass(MyList, list)
+    True
+
+    >>> isinstance(MyList, list)
+    False
+
+    >>> type(my_list) == MyList
+    True
+
+    >>> my_list = MyList()
+    >>> my_list.append(0)
+    >>> print(my_list)
+    [0]
+    >>> my_list.append(NULL)
+    Traceback (most recent call last):
+    	      ...
+    NameError: name 'NULL' is not defined
+
+    >>> my_list.append(int('inf'))
+    Traceback (most recent call last):
+    	      ...
+    ValueError: invalid literal for int() with base 10: 'inf'
+
+    >>> my_list.append(float('inf'))
+    >>> my_list.append(float('-inf'))
+    >>> print(my_list)
+    [0, inf, -inf]
+
+    >>> my_list.print_sorted([1, 2])
+    Traceback (most recent call last):
+    	      ...
+    TypeError: print_sorted() takes 1 positional argument but 2 were given
+
+    >>> my_list.print_sorted([1, 2], [3, 4])
+    Traceback (most recent call last):
+    	      ...
+    TypeError: print_sorted() takes 1 positional argument but 3 were given
+
+    >>> my_list.append(NaN)
+    Traceback (most recent call last):
+    	      ...
+    NameError: name 'NaN' is not defined
+
+    >>> my_list = list(range(1, 2, 3))
+    >>> my_list.print_sorted()
+    Traceback (most recent call last):
+    	      ...
+    AttributeError: 'list' object has no attribute 'print_sorted'
+
+    >>> my_list = list(range(1, 2))
+    >>> my_list.print_sorted()
+    Traceback (most recent call last):
+    	      ...
+    AttributeError: 'list' object has no attribute 'print_sorted'
+
+    >>> my_list = MyList()
+    >>> my_list.append(None)
+    >>> print(my_list)
+    [None]
+    >>> my_list.print_sorted()
+    [None]
